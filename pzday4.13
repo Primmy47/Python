@@ -1,0 +1,39 @@
+# Incrementing Attribute Value using Method
+
+class Car:
+    """A simple attempt to represent a car."""
+
+    def __init__(self, make, model, year):
+        """Initialize attributes to describe a car."""
+        self.make = make
+        self.model = model
+        self.year = year
+        self.odometer = 5
+
+    def get_descriptive_name(self):
+        """Return a neatly formatted descriptive name."""
+        long_name = (f"{self.year} {self.make} {self.model}")
+        return long_name.upper()
+
+    def read_odometer(self):
+        """Print a car's mileage"""
+        print(f"This car has {self.odometer} miles recorded.")
+
+    def update_odometer(self, mileage):
+        """Set the odometer reading to the given value."""
+        self.odometer = mileage
+
+    def increment_odometer(self, miles):
+        """Add the given amount to the odometer reading."""
+        self.odometer += miles
+
+
+used_car = Car('subaru', 'outback', 2019)
+print(used_car.get_descriptive_name())
+print(used_car.read_odometer())
+
+used_car.update_odometer(23249)
+print(used_car.read_odometer())
+
+used_car.increment_odometer(10000)
+print(used_car.read_odometer())

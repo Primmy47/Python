@@ -1,0 +1,31 @@
+# Modification Attribute Value using Method
+
+class Car:
+    """A simple attempt to represent a car."""
+
+    def __init__(self, make, model, year):
+        """Initialize attributes to describe a car."""
+        self.make = make
+        self.model = model
+        self.year = year
+        self.odometer = 5
+
+    def get_descriptive_name(self):
+        """Return a neatly formatted descriptive name."""
+        long_name = (f"{self.year} {self.make} {self.model}")
+        return long_name.upper()
+
+    def read_odometer(self):
+        """Print a car's mileage"""
+        print(f"This car has {self.odometer} miles recorded.")
+
+    def update_odometer(self, mileage):
+        """Set the odometer reading to the given value."""
+        self.odometer = mileage
+
+
+my_car = Car('BMW', 'X6', 2020)
+my_car.update_odometer(200)
+
+print(my_car.get_descriptive_name())
+print(my_car.read_odometer())

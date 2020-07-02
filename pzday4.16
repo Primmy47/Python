@@ -1,0 +1,15 @@
+class people:
+    def __init__(self,name,gender):
+        self.name = name
+        self.gender = gender
+
+    def get_descriptive_name(self):
+        long_name = (f"{self.name} {self.gender} ")
+        return long_name.upper()
+
+class student(people):
+    def __init__(self, name, gender):
+        super().__init__(name, gender)
+
+info = student('Primmy','F')
+print(info.get_descriptive_name())

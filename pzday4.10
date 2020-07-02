@@ -1,0 +1,17 @@
+class Car:
+    """A simple attempt to represent a car."""
+
+    def __init__(self, make, model, year):
+        """Initialize attributes to describe a car."""
+        self.make = make
+        self.model = model
+        self.year = year
+
+    def get_descriptive_name(self):
+        """Return a neatly formatted descriptive name."""
+        long_name = (f"{self.year} {self.make} {self.model}")
+        return long_name.upper()
+
+
+my_car = Car('audi', 'Q7', 2020)
+print(my_car.get_descriptive_name())
